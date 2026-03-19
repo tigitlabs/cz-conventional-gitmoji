@@ -32,15 +32,9 @@ mojis = [
         "desc": "Refactor code.",
     },
     {
-        "type": "perf",
-        "icon": GitmojiEnum.PERF.value,
-        "code": ":zap:",
-        "desc": "Improve performance.",
-    },
-    {
         "type": "test",
-        "icon": GitmojiEnum.TEST.value,
-        "code": ":white_check_mark:",
+        "icon": GitmojiEnum.TEST_FAIL.value,
+        "code": ":test_tube:",
         "desc": "Add, update, or pass tests.",
     },
     {
@@ -228,18 +222,6 @@ mojis = [
         "icon": GitmojiEnum.DEPRECATION.value,
         "code": ":wastebasket:",
         "desc": "Deprecate code that needs to be cleaned up.",
-    },
-    {
-        "type": "exploration",
-        "icon": GitmojiEnum.EXPLORATION.value,
-        "code": ":monocle_face:",
-        "desc": "Data exploration/inspection.",
-    },
-    {
-        "type": "test-fail",
-        "icon": GitmojiEnum.TEST_FAIL.value,
-        "code": ":test_tube:",
-        "desc": "Add a failing test.",
     },
     {
         "type": "devxp",
