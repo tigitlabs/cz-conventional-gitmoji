@@ -92,12 +92,6 @@ mojis = [
         "desc": "Begin a project.",
     },
     {
-        "type": "security",
-        "icon": GitmojiEnum.SECURITY.value,
-        "code": ":lock:",
-        "desc": "Fix security issues.",
-    },
-    {
         "type": "secret",
         "icon": GitmojiEnum.SECRET.value,
         "code": ":closed_lock_with_key:",
@@ -140,12 +134,6 @@ mojis = [
         "desc": "Pin dependencies to specific versions.",
     },
     {
-        "type": "analytics",
-        "icon": GitmojiEnum.ANALYTICS.value,
-        "code": ":chart_with_upwards_trend:",
-        "desc": "Add or update analytics or track code.",
-    },
-    {
         "type": "dep-add",
         "icon": GitmojiEnum.DEP_ADD.value,
         "code": ":heavy_plus_sign:",
@@ -170,12 +158,6 @@ mojis = [
         "desc": "Add or update development scripts.",
     },
     {
-        "type": "lang",
-        "icon": GitmojiEnum.LANG.value,
-        "code": ":globe_with_meridians:",
-        "desc": "Internationalization and localization.",
-    },
-    {
         "type": "typo",
         "icon": GitmojiEnum.TYPO.value,
         "code": ":pencil2:",
@@ -194,12 +176,6 @@ mojis = [
         "desc": "Add or update compiled files or packages.",
     },
     {
-        "type": "external",
-        "icon": GitmojiEnum.EXTERNAL.value,
-        "code": ":alien:",
-        "desc": "Update code due to external API changes.",
-    },
-    {
         "type": "resource",
         "icon": GitmojiEnum.RESOURCE.value,
         "code": ":truck:",
@@ -212,64 +188,16 @@ mojis = [
         "desc": "Add or update license.",
     },
     {
-        "type": "boom",
-        "icon": GitmojiEnum.BOOM.value,
-        "code": ":boom:",
-        "desc": "Introduce breaking changes.",
-    },
-    {
         "type": "asset",
         "icon": GitmojiEnum.ASSET.value,
         "code": ":bento:",
         "desc": "Add or update assets.",
     },
     {
-        "type": "accessibility",
-        "icon": GitmojiEnum.ACCESSIBILITY.value,
-        "code": ":wheelchair:",
-        "desc": "Improve accessibility.",
-    },
-    {
-        "type": "source-docs",
-        "icon": GitmojiEnum.SOURCE_DOCS.value,
-        "code": ":bulb:",
-        "desc": "Add or update comments in source code.",
-    },
-    {
-        "type": "text",
-        "icon": GitmojiEnum.TEXT.value,
-        "code": ":speech_balloon:",
-        "desc": "Add or update text and literals.",
-    },
-    {
         "type": "db",
         "icon": GitmojiEnum.DB.value,
         "code": ":card_file_box:",
         "desc": "Perform database related changes.",
-    },
-    {
-        "type": "logs-add",
-        "icon": GitmojiEnum.LOGS_ADD.value,
-        "code": ":loud_sound:",
-        "desc": "Add or update logs.",
-    },
-    {
-        "type": "logs-rm",
-        "icon": GitmojiEnum.LOGS_RM.value,
-        "code": ":mute:",
-        "desc": "Remove logs.",
-    },
-    {
-        "type": "people",
-        "icon": GitmojiEnum.PEOPLE.value,
-        "code": ":busts_in_silhouette:",
-        "desc": "Add or update contributor(s).",
-    },
-    {
-        "type": "ux",
-        "icon": GitmojiEnum.UX.value,
-        "code": ":children_crossing:",
-        "desc": "Improve user experience / usability.",
     },
     {
         "type": "arch",
@@ -296,64 +224,10 @@ mojis = [
         "desc": "Add or update snapshots.",
     },
     {
-        "type": "experiment",
-        "icon": GitmojiEnum.EXPERIMENT.value,
-        "code": ":alembic:",
-        "desc": "Perform experiments.",
-    },
-    {
-        "type": "seo",
-        "icon": GitmojiEnum.SEO.value,
-        "code": ":mag:",
-        "desc": "Improve SEO.",
-    },
-    {
-        "type": "types",
-        "icon": GitmojiEnum.TYPES.value,
-        "code": ":label:",
-        "desc": "Add or update types.",
-    },
-    {
-        "type": "seed",
-        "icon": GitmojiEnum.SEED.value,
-        "code": ":seedling:",
-        "desc": "Add or update seed files.",
-    },
-    {
-        "type": "flag",
-        "icon": GitmojiEnum.FLAG.value,
-        "code": ":triangular_flag_on_post:",
-        "desc": "Add, update, or remove feature flags.",
-    },
-    {
-        "type": "catch",
-        "icon": GitmojiEnum.CATCH.value,
-        "code": ":goal_net:",
-        "desc": "Catch errors.",
-    },
-    {
-        "type": "animation",
-        "icon": GitmojiEnum.ANIMATION.value,
-        "code": ":dizzy:",
-        "desc": "Add or update animations and transitions.",
-    },
-    {
         "type": "deprecation",
         "icon": GitmojiEnum.DEPRECATION.value,
         "code": ":wastebasket:",
         "desc": "Deprecate code that needs to be cleaned up.",
-    },
-    {
-        "type": "auth",
-        "icon": GitmojiEnum.AUTH.value,
-        "code": ":passport_control:",
-        "desc": "Work on code related to authorization, roles and permissions.",
-    },
-    {
-        "type": "fix-simple",
-        "icon": GitmojiEnum.FIX_SIMPLE.value,
-        "code": ":adhesive_bandage:",
-        "desc": "Simple fix for a non-critical issue.",
     },
     {
         "type": "exploration",
@@ -362,46 +236,16 @@ mojis = [
         "desc": "Data exploration/inspection.",
     },
     {
-        "type": "dead",
-        "icon": GitmojiEnum.DEAD.value,
-        "code": ":coffin:",
-        "desc": "Remove dead code.",
-    },
-    {
         "type": "test-fail",
         "icon": GitmojiEnum.TEST_FAIL.value,
         "code": ":test_tube:",
         "desc": "Add a failing test.",
     },
     {
-        "type": "logic",
-        "icon": GitmojiEnum.LOGIC.value,
-        "code": ":necktie:",
-        "desc": "Add or update business logic.",
-    },
-    {
-        "type": "health",
-        "icon": GitmojiEnum.HEALTH.value,
-        "code": ":stethoscope:",
-        "desc": "Add or update healthcheck.",
-    },
-    {
-        "type": "infra",
-        "icon": GitmojiEnum.INFRA.value,
-        "code": ":bricks:",
-        "desc": "Infrastructure related changes.",
-    },
-    {
         "type": "devxp",
         "icon": GitmojiEnum.DEVXP.value,
         "code": ":technologist:",
         "desc": "Improve developer experience.",
-    },
-    {
-        "type": "validation",
-        "icon": GitmojiEnum.VALIDATION.value,
-        "code": ":safety_vest:",
-        "desc": "Add or update code related to validation.",
     },
     {
         "type": "chore",
