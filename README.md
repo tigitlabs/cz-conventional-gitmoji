@@ -1,5 +1,12 @@
 # cz-conventional-gitmoji
 
+Forked and removed some of the options when starting a new commit.
+When `commitizen` is installed via `pipx` you can install this plugin via:
+`pipx inject commitizen git+https://github.com/tigitlabs/cz-conventional-gitmoji.git`
+
+---
+Original Readme
+
 A [commitizen](https://github.com/commitizen-tools/commitizen) plugin that combines [gitmoji](https://gitmoji.dev/) and [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## Installation
