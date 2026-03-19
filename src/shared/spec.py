@@ -182,12 +182,6 @@ mojis = [
         "desc": "Fix typos.",
     },
     {
-        "type": "poop",
-        "icon": GitmojiEnum.POOP.value,
-        "code": ":poop:",
-        "desc": "Write bad code that needs to be improved.",
-    },
-    {
         "type": "merge",
         "icon": GitmojiEnum.MERGE.value,
         "code": ":twisted_rightwards_arrows:",
@@ -242,12 +236,6 @@ mojis = [
         "desc": "Add or update comments in source code.",
     },
     {
-        "type": "beer",
-        "icon": GitmojiEnum.BEER.value,
-        "code": ":beers:",
-        "desc": "Write code drunkenly.",
-    },
-    {
         "type": "text",
         "icon": GitmojiEnum.TEXT.value,
         "code": ":speech_balloon:",
@@ -294,18 +282,6 @@ mojis = [
         "icon": GitmojiEnum.DESIGN.value,
         "code": ":iphone:",
         "desc": "Work on responsive design.",
-    },
-    {
-        "type": "mock",
-        "icon": GitmojiEnum.MOCK.value,
-        "code": ":clown_face:",
-        "desc": "Mock things.",
-    },
-    {
-        "type": "egg",
-        "icon": GitmojiEnum.EGG.value,
-        "code": ":egg:",
-        "desc": "Add or update an easter egg.",
     },
     {
         "type": "ignore",
@@ -420,18 +396,6 @@ mojis = [
         "icon": GitmojiEnum.DEVXP.value,
         "code": ":technologist:",
         "desc": "Improve developer experience.",
-    },
-    {
-        "type": "money",
-        "icon": GitmojiEnum.MONEY.value,
-        "code": ":money_with_wings:",
-        "desc": "Add sponsorships or money related infrastructure.",
-    },
-    {
-        "type": "threading",
-        "icon": GitmojiEnum.THREADING.value,
-        "code": ":thread:",
-        "desc": "Add or update code related to multithreading or concurrency.",
     },
     {
         "type": "validation",
