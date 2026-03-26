@@ -34,6 +34,27 @@ name = "cz_gitmoji"
 
 This will make `commitizen` use the commit message parsing rules defined by this plugin, which are 100% compatible with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). As such, the gitmojis are completely optional and all commands will continue to validate commit messages in conventional format just fine. This is useful if you're transitioning an existing repo to `cz-conventional-gitmoji` or you work in a team in which some colleagues don't like gitmojis.
 
+### Optional questions
+
+The following commit prompt questions are **disabled by default** and can be enabled individually via config:
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `enable_time` | `false` | Ask "Time spent (i.e. 3h 15m)" |
+| `enable_body` | `false` | Ask for additional contextual information (multi-line body) |
+| `enable_breaking_change` | `false` | Ask "Is this a BREAKING CHANGE?" |
+| `enable_footer` | `false` | Ask for a footer (breaking changes / closed issues) |
+
+Example configuration to enable some of them:
+
+```toml
+[tool.commitizen]
+name = "cz_gitmoji"
+enable_body = true
+enable_breaking_change = true
+enable_footer = true
+```
+
 ### gitmojify
 
 Apart from the conventional-gitmoji rules, this package provides the `gitmojify` command which is also available as a pre-commit hook. The command reads a commit message either from cli or a commit message file and prepends the correct gitmoji based on the type. If the message already has a gitmoji, it is returned as is.

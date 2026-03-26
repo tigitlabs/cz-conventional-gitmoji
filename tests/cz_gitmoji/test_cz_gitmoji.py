@@ -50,6 +50,31 @@ def test_questions(cz_gitmoji: CommitizenGitmojiCz) -> None:
     assert len(questions[0]["choices"]) == len(mojis)
 
 
+def test_questions_default_only_required(cz_gitmoji: CommitizenGitmojiCz) -> None:
+    """Verify that only required questions are shown by default."""
+    questions = cz_gitmoji.questions()
+    question_names = [q["name"] for q in questions]
+    assert "prefix" in question_names
+    assert "scope" in question_names
+    assert "subject" in question_names
+    assert "time" not in question_names
+    assert "body" not in question_names
+    assert "is_breaking_change" not in question_names
+    assert "footer" not in question_names
+
+
+def test_questions_all_enabled(
+    cz_gitmoji_all_enabled: CommitizenGitmojiCz,
+) -> None:
+    """Verify that all questions appear when all options are enabled."""
+    questions = cz_gitmoji_all_enabled.questions()
+    question_names = [q["name"] for q in questions]
+    assert "time" in question_names
+    assert "body" in question_names
+    assert "is_breaking_change" in question_names
+    assert "footer" in question_names
+
+
 def test_message(
     cz_gitmoji: CommitizenGitmojiCz,
     messages: Tuple[Dict[str, Any], str],

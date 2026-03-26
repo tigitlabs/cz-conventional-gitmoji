@@ -17,9 +17,31 @@ def config():
 
 
 @pytest.fixture()
+def config_all_enabled():
+    """Return a config with all optional questions enabled."""
+    _config = BaseConfig()
+    _config.settings.update(
+        {
+            "name": defaults.name,
+            "enable_time": True,
+            "enable_body": True,
+            "enable_breaking_change": True,
+            "enable_footer": True,
+        }
+    )
+    return _config
+
+
+@pytest.fixture()
 def cz_gitmoji(config: BaseConfig) -> CommitizenGitmojiCz:
     """Return a CommitizenGitmojiCz instance."""
     return CommitizenGitmojiCz(config)
+
+
+@pytest.fixture()
+def cz_gitmoji_all_enabled(config_all_enabled: BaseConfig) -> CommitizenGitmojiCz:
+    """Return a CommitizenGitmojiCz instance with all optional questions enabled."""
+    return CommitizenGitmojiCz(config_all_enabled)
 
 
 @pytest.fixture(
@@ -72,6 +94,15 @@ def cz_gitmoji(config: BaseConfig) -> CommitizenGitmojiCz:
                 "footer": "Ref: #1111, #1112, #1113",
             },
             f"{GitmojiEnum.BUILD} build(docker): xpto\n\nHe drove out the man; and at the east of the garden at the time of the evening breeze, and the man and put him in the garden of Eden, to till the ground the LORD God walking in the image of God he created them; male and female he created them.\n\nRef: #1111, #1112, #1113",
+        ),
+        # minimal answers (no optional fields)
+        (
+            {
+                "prefix": f"{GitmojiEnum.FIX} fix",
+                "scope": "",
+                "subject": "resolve null pointer",
+            },
+            f"{GitmojiEnum.FIX} fix: resolve null pointer",
         ),
     ]
 )
