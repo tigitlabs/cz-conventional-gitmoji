@@ -198,7 +198,7 @@ class CommitizenGitmojiCz(BaseCommitizen):
 
     def questions(self) -> List[Dict[str, Any]]:
         """Return the questions to ask the user."""
-        return [
+        questions: List[Dict[str, Any]] = [
             {
                 "type": "list",
                 "name": "prefix",
@@ -229,44 +229,57 @@ class CommitizenGitmojiCz(BaseCommitizen):
                     "(lower case and no period)\n"
                 ),
             },
-            {
-                "type": "input",
-                "name": "time",
-                "message": "Time spent (i.e. 3h 15m) (press [enter] to skip):\n",
-                "filter": lambda x: "⏰ " + x.strip() if x else "",
-            },
-            {
-                "type": "input",
-                "name": "body",
-                "message": "Provide additional contextual information about the code changes:\n",
-                "filter": multiple_line_breaker,
-                "multiline": True,
-            },
-            {
-                "type": "confirm",
-                "message": "Is this a BREAKING CHANGE? Correlates with MAJOR in SemVer",
-                "name": "is_breaking_change",
-                "default": False,
-            },
-            {
-                "type": "input",
-                "name": "footer",
-                "message": (
-                    "Footer. Information about Breaking Changes and reference "
-                    "issues that this commit closes: (press [enter] to skip)\n"
-                ),
-            },
         ]
+        if self.config.settings.get("enable_time", False):
+            questions.append(
+                {
+                    "type": "input",
+                    "name": "time",
+                    "message": "Time spent (i.e. 3h 15m) (press [enter] to skip):\n",
+                    "filter": lambda x: "⏰ " + x.strip() if x else "",
+                }
+            )
+        if self.config.settings.get("enable_body", False):
+            questions.append(
+                {
+                    "type": "input",
+                    "name": "body",
+                    "message": "Provide additional contextual information about the code changes:\n",
+                    "filter": multiple_line_breaker,
+                    "multiline": True,
+                }
+            )
+        if self.config.settings.get("enable_breaking_change", False):
+            questions.append(
+                {
+                    "type": "confirm",
+                    "message": "Is this a BREAKING CHANGE? Correlates with MAJOR in SemVer",
+                    "name": "is_breaking_change",
+                    "default": False,
+                }
+            )
+        if self.config.settings.get("enable_footer", False):
+            questions.append(
+                {
+                    "type": "input",
+                    "name": "footer",
+                    "message": (
+                        "Footer. Information about Breaking Changes and reference "
+                        "issues that this commit closes: (press [enter] to skip)\n"
+                    ),
+                }
+            )
+        return questions
 
     def message(self, answers: Dict[str, Any]) -> str:
         """Generate a commit message from the answers."""
         prefix = answers["prefix"]
         scope = answers["scope"]
         subject = answers["subject"]
-        body = answers["body"]
-        footer = answers["footer"]
-        is_breaking_change = answers["is_breaking_change"]
-        time = answers["time"]
+        body = answers.get("body", "")
+        footer = answers.get("footer", "")
+        is_breaking_change = answers.get("is_breaking_change", False)
+        time = answers.get("time", "")
 
         if scope:
             scope = f"({scope})"
